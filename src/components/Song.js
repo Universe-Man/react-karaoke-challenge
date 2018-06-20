@@ -1,13 +1,23 @@
 import React from 'react';
 
-const Song = () => {
+class Song extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      playing: false
+    }
+  }
+  render(){
   return (
     <tr className="song">
-      <td>title</td>
-      <td>singer</td>
-      <td><button>Play</button></td>
+      <td>{this.props.title}</td>
+      <td>{this.props.singer}</td>
+      <td><button id={this.props.id}
+      onClick={(e) => {
+        this.props.playSong(e, this.props.id)
+      }}>Play</button></td>
     </tr>
-  )
+  )}
 }
 
 export default Song;
