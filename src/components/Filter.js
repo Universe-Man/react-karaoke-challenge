@@ -7,19 +7,19 @@ class Filter extends Component {
       // hi: null
     }
   }
-  updateText = (event) => {
-    console.log(event.target.value)
-    // this.setState({
-    //   hi: updateText
-    // })
-  }
+  // updateText = (event) => {
+  //   console.log(event.target.value)
+  //   // this.setState({
+  //   //   hi: updateText
+  //   // })
+  // }
   render() {
 
 
     return (
       <div className="filter">
         <label htmlFor="title-filter">Title: </label>
-        <input id="title-filter" type="text" onChange={this.updateText}/>
+        <input id="title-filter" type="text" onChange={this.props.updateText}/>
       </div>
     );
   }
